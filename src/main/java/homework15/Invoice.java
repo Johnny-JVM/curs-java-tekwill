@@ -9,8 +9,8 @@ public class Invoice {
    public Invoice(String model, String description, int sales, double price) {
      this.model = model;
    this.description =description;
-   this.sales = sales;
-  this.price = price;
+   setSales(sales);
+  setPrice(price);
    }
 
    public String getModel() {
@@ -33,8 +33,7 @@ public class Invoice {
       return sales;
    }
    public void setSales(int sales) {
-      this.sales = sales;
-      for (int p = 0 ; p < 0; p =0);
+      this.sales = (sales > 0) ? sales : 0;
    }
 
 
@@ -42,8 +41,7 @@ public class Invoice {
       return price;
    }
    public void setPrice(double price) {
-      this.price = price;
-      for (double i = 0; i < 0; i =0.0);
+      this.price = (price > 0.00) ? price : 0.00;
    }
 
 
